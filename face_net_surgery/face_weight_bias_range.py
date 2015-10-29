@@ -1,4 +1,4 @@
-import sys
+import sys 
 file_write = open('face_range.txt', 'w')
 sys.stdout = file_write
 
