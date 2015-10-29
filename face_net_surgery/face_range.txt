@@ -1,0 +1,92 @@
+
+============face_12c=================
+Shape of conv1 weight params : (16, 3, 3, 3)
+Max : 0.342099  min : -0.195397
+Shape of conv1 bias params: (16,)
+Max : 0.276954  min : -0.192599
+Shape of fc2 weight params : (16, 400)
+Max : 0.063595  min : -0.0728141
+Shape of fc2 bias params: (16,)
+Max : 1.65117  min : -0.0345223
+Shape of fc3 weight params : (2, 16)
+Max : 0.0362874  min : -0.0362874
+Shape of fc3 bias params: (2,)
+Max : 1.24082  min : -1.24082
+
+============face_12_cal=================
+Shape of conv1 weight params : (16, 3, 3, 3)
+Max : 0.464005  min : -0.783001
+Shape of conv1 bias params: (16,)
+Max : 0.0323333  min : -0.0339228
+Shape of fc2 weight params : (128, 400)
+Max : 0.109551  min : -0.153905
+Shape of fc2 bias params: (128,)
+Max : 2.07209  min : -0.232957
+Shape of fc3 weight params : (45, 128)
+Max : 0.0169061  min : -0.0189328
+Shape of fc3 bias params: (45,)
+Max : 0.497619  min : -0.793006
+
+============face_24c=================
+Shape of conv1 weight params : (64, 3, 5, 5)
+Max : 0.247758  min : -0.162329
+Shape of conv1 bias params: (64,)
+Max : 0.0432797  min : -0.0432378
+Shape of fc2 weight params : (128, 6400)
+Max : 0.0394352  min : -0.0344283
+Shape of fc2 bias params: (128,)
+Max : 0.0436987  min : -0.241113
+Shape of fc3 weight params : (2, 128)
+Max : 0.0305778  min : -0.0305778
+Shape of fc3 bias params: (2,)
+Max : 1.31034  min : -1.31034
+
+============face_24_cal=================
+Shape of conv1 weight params : (32, 3, 5, 5)
+Max : 0.325303  min : -0.388623
+Shape of conv1 bias params: (32,)
+Max : 0.0145775  min : -0.0663942
+Shape of fc2 weight params : (64, 3200)
+Max : 0.0587185  min : -0.0550541
+Shape of fc2 bias params: (64,)
+Max : 0.691422  min : -0.201234
+Shape of fc3 weight params : (45, 64)
+Max : 0.0167262  min : -0.0182964
+Shape of fc3 bias params: (45,)
+Max : 0.411269  min : -0.754372
+
+============face_48c=================
+Shape of conv1 weight params : (64, 3, 5, 5)
+Max : 0.13821  min : -0.105972
+Shape of conv1 bias params: (64,)
+Max : 0.00694025  min : -0.00926258
+Shape of conv2 weight params : (64, 64, 5, 5)
+Max : 0.066581  min : -0.0550424
+Shape of conv2 bias params: (64,)
+Max : 0.0120665  min : -0.0046654
+Shape of fc3 weight params : (256, 5184)
+Max : 0.0168569  min : -0.0113149
+Shape of fc3 bias params: (256,)
+Max : 0.0605145  min : -0.0691925
+Shape of fc4 weight params : (2, 256)
+Max : 0.00833429  min : -0.0083343
+Shape of fc4 bias params: (2,)
+Max : 2.47415  min : -2.47415
+
+============face_48_cal=================
+Shape of conv1 weight params : (64, 3, 5, 5)
+Max : 0.291258  min : -0.317526
+Shape of conv1 bias params: (64,)
+Max : 0.00803105  min : -0.00897809
+Shape of conv2 weight params : (64, 64, 5, 5)
+Max : 0.201707  min : -0.183627
+Shape of conv2 bias params: (64,)
+Max : 0.00705499  min : -0.00580792
+Shape of fc3 weight params : (256, 5184)
+Max : 0.0541123  min : -0.0469703
+Shape of fc3 bias params: (256,)
+Max : 1.10879  min : -0.0101669
+Shape of fc4 weight params : (45, 256)
+Max : 0.00787529  min : -0.00754613
+Shape of fc4 bias params: (45,)
+Max : 0.711633  min : -0.719819
