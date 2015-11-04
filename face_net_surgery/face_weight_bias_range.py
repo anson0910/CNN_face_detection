@@ -1,4 +1,4 @@
-import sys 
+import sys
 file_write = open('face_range.txt', 'w')
 sys.stdout = file_write
 
@@ -8,15 +8,15 @@ import sys
 sys.path.insert(0, caffe_root + 'python')
 import caffe
 
-# ==================  load face_12c  ======================================
+# ==================  load face12c_full_conv  ======================================
 # Set the right path to your model definition file, pretrained model weights,
 # and the image you would like to classify.
-MODEL_FILE = '/home/anson/caffe-master/models/face_12c/deploy.prototxt'
-PRETRAINED = '/home/anson/caffe-master/models/face_12c/face_12c_train_iter_400000.caffemodel'
+MODEL_FILE = '/home/anson/caffe-master/models/face_12c/face12c_full_conv.prototxt'
+PRETRAINED = '/home/anson/caffe-master/models/face_12c/face12c_full_conv.caffemodel'
 caffe.set_mode_gpu()
 net = caffe.Net(MODEL_FILE, PRETRAINED, caffe.TEST)
 
-print "\n============face_12c================="
+print "\n============face12c_full_conv================="
 #print [(k, v[0].data.shape) for k, v in net.params.items()]
 for k, v in net.params.items():
     # print (k, v[0].data.shape)

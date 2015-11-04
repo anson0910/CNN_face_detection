@@ -1,15 +1,17 @@
-============face_12c=================
-Shape of conv1 weight params : (16, 3, 3, 3)
-Max : 0.342099  min : -0.195397
-Shape of conv1 bias params: (16,)
+A(a, b) : range = -2^a ~ 2^a - 2^-b		// weights and biases are quantized to 3 ~ 9 bits
+
+============face12c_full_conv=================
+Shape of conv1 weight params : (16, 3, 3, 3)		a = -1  b = 3 ~ 9
+Max : 0.342099  min : -0.195397							a = 11  b = -9 ~ -3            // max would be 150*0.34*3*3*3 = 1377
+Shape of conv1 bias params: (16,)				a = -1  b = 3 ~ 9
 Max : 0.276954  min : -0.192599
-Shape of fc2 weight params : (16, 400)
+Shape of fc2-conv weight params : (16, 16, 5, 5)		a = -3  b = 5 ~ 11
 Max : 0.063595  min : -0.0728141
-Shape of fc2 bias params: (16,)
+Shape of fc2-conv bias params: (16,)				a = 2  b = 0 ~ 6
 Max : 1.65117  min : -0.0345223
-Shape of fc3 weight params : (2, 16)
+Shape of fc3-conv weight params : (2, 16, 1, 1)		a = -4  b = 6 ~ 12
 Max : 0.0362874  min : -0.0362874
-Shape of fc3 bias params: (2,)
+Shape of fc3-conv bias params: (2,)				a = 1  b = 1 ~ 7
 Max : 1.24082  min : -1.24082
 
 ============face_12_cal=================
