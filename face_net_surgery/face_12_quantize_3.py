@@ -102,6 +102,4 @@ for k, v in net_quantized.params.items():
 net_quantized.save('/home/anson/caffe-master/models/face_12c/face12c_full_conv_quantize_3.caffemodel')
 
 
-# file_write = open('face_12_full_conv_params_test.txt', 'w')
-# sys.stdout = file_write
-
+# see caffe/examples/filter_visualization.ipynb
