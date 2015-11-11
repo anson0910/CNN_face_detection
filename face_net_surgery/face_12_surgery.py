@@ -1,3 +1,7 @@
+'''
+Transplants parameters to full conv version of net
+'''
+
 import numpy as np
 import cv2
 import time
