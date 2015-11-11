@@ -15,17 +15,17 @@ Shape of fc3-conv bias params: (2,)				a = 1  b = 1 ~ 7
 Max : 1.24082  min : -1.24082
 
 ============face_12_cal=================
-Shape of conv1 weight params : (16, 3, 3, 3)
+Shape of conv1 weight params : (16, 3, 3, 3)		a = 0  b = 2 ~ 8
 Max : 0.464005  min : -0.783001
-Shape of conv1 bias params: (16,)
+Shape of conv1 bias params: (16,)				a = -4  b = 6 ~ 12
 Max : 0.0323333  min : -0.0339228
-Shape of fc2 weight params : (128, 400)
+Shape of fc2 weight params : (128, 400)			a = -2  b = 4 ~ 10
 Max : 0.109551  min : -0.153905
-Shape of fc2 bias params: (128,)
+Shape of fc2 bias params: (128,)				a = 1  b = 1 ~ 7
 Max : 2.07209  min : -0.232957
-Shape of fc3 weight params : (45, 128)
+Shape of fc3 weight params : (45, 128)				a = -5  b = 7   // -0.03125~0.0234
 Max : 0.0169061  min : -0.0189328
-Shape of fc3 bias params: (45,)
+Shape of fc3 bias params: (45,)				a = 0  b = 2 ~ 8   // -1~0.75
 Max : 0.497619  min : -0.793006
 
 ============face_24c=================
