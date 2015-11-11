@@ -10,17 +10,22 @@ caffe_root = '/home/anson/caffe-master/'
 sys.path.insert(0, caffe_root + 'python')
 import caffe
 # =================================================================================
-modelDirList = ['face_12c']
-modelNameList = ['face12c_full_conv']
+modelDirList = ['face_12c', 'face_12_cal']
+modelNameList = ['face12c_full_conv', 'face_12_cal']
 
 for curModel in range(len(modelDirList)):
     for quantize_bit_num in range(3, 10):
 
-        file_write = open(modelNameList[curModel] + '_quantize_' + str(quantize_bit_num) + '_params.txt', 'w')
+        file_write = open('./params/' + modelNameList[curModel] + '_quantize_'
+                          + str(quantize_bit_num) + '_params.txt', 'w')
         sys.stdout = file_write
         # ==================  load face12c_full_conv  ======================================
-        MODEL_FILE = '/home/anson/caffe-master/models/' \
-                     + modelDirList[curModel] + '/' + modelNameList[curModel] + '.prototxt'
+        if curModel == 0:
+            MODEL_FILE = '/home/anson/caffe-master/models/' \
+                         + modelDirList[curModel] + '/' + modelNameList[curModel] + '.prototxt'
+        else:
+            MODEL_FILE = '/home/anson/caffe-master/models/' \
+                         + modelDirList[curModel] + '/' + 'deploy.prototxt'
         PRETRAINED = '/home/anson/caffe-master/models/' \
                      + modelDirList[curModel] + '/' + modelNameList[curModel] + '_quantize_' \
                      + str(quantize_bit_num) + '.caffemodel'
