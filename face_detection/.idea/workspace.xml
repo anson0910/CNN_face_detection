@@ -21,73 +21,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="face_detection_example.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/face_detection_example.py">
+      <file leaf-file-name="face_cascade_fullconv_quantize_fddb.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/face_cascade_fullconv_quantize_fddb.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <caret line="554" column="27" selection-start-line="554" selection-start-column="27" selection-end-line="554" selection-end-column="27" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#5058#5247#0" expanded="false" />
+                <element signature="e#5282#5671#0" expanded="false" />
+                <element signature="e#5717#6288#0" expanded="false" />
+                <element signature="e#6318#7263#0" expanded="false" />
+                <element signature="e#7293#8300#0" expanded="false" />
+                <element signature="e#8331#9723#0" expanded="false" />
+                <element signature="e#9755#11254#0" expanded="false" />
+                <element signature="e#13788#17519#0" expanded="false" />
+                <element signature="e#17568#18527#0" expanded="false" />
+                <element signature="e#18573#21644#0" expanded="false" />
+                <element signature="e#21693#22712#0" expanded="false" />
+                <element signature="e#22758#25841#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="face_12c_detect.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/face_12c_detect.py">
+      <file leaf-file-name="face_cascade_fullconv_fddb.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/face_cascade_fullconv_fddb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="137" column="38" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#5151#5340#0" expanded="false" />
-                <element signature="e#5375#5764#0" expanded="false" />
-                <element signature="e#5810#6381#0" expanded="false" />
-                <element signature="e#6411#7356#0" expanded="false" />
-                <element signature="e#7386#8393#0" expanded="false" />
-                <element signature="e#8424#9816#0" expanded="false" />
-                <element signature="e#9848#11347#0" expanded="false" />
-                <element signature="e#11425#13921#0" expanded="false" />
-                <element signature="e#13967#17698#0" expanded="false" />
-                <element signature="e#17747#18706#0" expanded="false" />
-                <element signature="e#18752#21823#0" expanded="false" />
-                <element signature="e#21872#22891#0" expanded="false" />
-                <element signature="e#22937#26020#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="face_48_fddb.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/face_48_fddb.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="556" column="42" selection-start-line="556" selection-start-column="42" selection-end-line="556" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#5141#5330#0" expanded="false" />
-                <element signature="e#5365#5754#0" expanded="false" />
-                <element signature="e#5800#6371#0" expanded="false" />
-                <element signature="e#6401#7346#0" expanded="false" />
-                <element signature="e#7376#8383#0" expanded="false" />
-                <element signature="e#8414#9806#0" expanded="false" />
-                <element signature="e#9838#11337#0" expanded="false" />
-                <element signature="e#11415#13911#0" expanded="false" />
-                <element signature="e#13957#17688#0" expanded="false" />
-                <element signature="e#17737#18696#0" expanded="false" />
-                <element signature="e#18742#21813#0" expanded="false" />
-                <element signature="e#21862#22881#0" expanded="false" />
-                <element signature="e#22927#26010#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="face_48_fddb_fullconv.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/face_48_fddb_fullconv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6157158">
-              <caret line="542" column="14" selection-start-line="542" selection-start-column="14" selection-end-line="542" selection-end-column="14" />
+            <state vertical-scroll-proportion="2.6054888">
+              <caret line="546" column="27" selection-start-line="546" selection-start-column="27" selection-end-line="546" selection-end-column="27" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#4816#5005#0" expanded="false" />
@@ -97,11 +59,11 @@
                 <element signature="e#7051#8058#0" expanded="false" />
                 <element signature="e#8089#9481#0" expanded="false" />
                 <element signature="e#9513#11012#0" expanded="false" />
-                <element signature="e#13546#17277#0" expanded="false" />
-                <element signature="e#17326#18285#0" expanded="false" />
-                <element signature="e#18331#21402#0" expanded="false" />
-                <element signature="e#21451#22470#0" expanded="false" />
-                <element signature="e#22516#25599#0" expanded="false" />
+                <element signature="e#13545#17276#0" expanded="false" />
+                <element signature="e#17325#18284#0" expanded="false" />
+                <element signature="e#18330#21401#0" expanded="false" />
+                <element signature="e#21450#22469#0" expanded="false" />
+                <element signature="e#22515#25598#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -132,53 +94,6 @@
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="face_48_AFW.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/face_48_AFW.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#5138#5327#0" expanded="false" />
-                <element signature="e#5362#5751#0" expanded="false" />
-                <element signature="e#5797#6368#0" expanded="false" />
-                <element signature="e#6398#7346#0" expanded="false" />
-                <element signature="e#7376#8383#0" expanded="false" />
-                <element signature="e#8414#9806#0" expanded="false" />
-                <element signature="e#9838#11336#0" expanded="false" />
-                <element signature="e#11414#13590#0" expanded="false" />
-                <element signature="e#13636#16933#0" expanded="false" />
-                <element signature="e#16982#17687#0" expanded="false" />
-                <element signature="e#17733#20804#0" expanded="false" />
-                <element signature="e#20853#21783#0" expanded="false" />
-                <element signature="e#21829#24908#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="face_ViolaJones.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/face_ViolaJones.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="many2oneText_fold.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/many2oneText_fold.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="18" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -223,6 +138,9 @@
         <option value="$PROJECT_DIR$/face_48_fddb.py" />
         <option value="$PROJECT_DIR$/face_12c_detect.py" />
         <option value="$PROJECT_DIR$/face_48_fddb_fullconv.py" />
+        <option value="$PROJECT_DIR$/detections/face_cascade_fullconv_quantize_fddb.py" />
+        <option value="$PROJECT_DIR$/face_cascade_fullconv_quantize_fddb.py" />
+        <option value="$PROJECT_DIR$/face_cascade_fullconv_fddb.py" />
       </list>
     </option>
   </component>
@@ -274,7 +192,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -296,6 +213,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -303,7 +221,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sortROC.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/face_cascade_fullconv_fddb.py" />
     <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="RunManager" selected="Python.face_wacv">
@@ -441,7 +359,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="untitled" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sortROC.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/face_cascade_fullconv_fddb.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -471,20 +389,20 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17381857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2145573" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.265285" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35854924" sideWeight="0.49563795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20725389" sideWeight="0.50436205" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20725389" sideWeight="0.49563795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -500,7 +418,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="69" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/face_cascade_fddb.py</url>
+          <line>478</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="77" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -510,7 +435,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -528,7 +453,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="81" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -553,7 +478,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -571,7 +496,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="81" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -596,7 +521,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -629,7 +554,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -662,7 +587,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -695,7 +620,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -728,7 +653,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -761,7 +686,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="23" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -786,7 +711,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -819,7 +744,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="75" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -850,112 +775,15 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/many2oneText_fold.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sortROC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/face_detection_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/face_48_AFW.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#5138#5327#0" expanded="false" />
-            <element signature="e#5362#5751#0" expanded="false" />
-            <element signature="e#5797#6368#0" expanded="false" />
-            <element signature="e#6398#7346#0" expanded="false" />
-            <element signature="e#7376#8383#0" expanded="false" />
-            <element signature="e#8414#9806#0" expanded="false" />
-            <element signature="e#9838#11336#0" expanded="false" />
-            <element signature="e#11414#13590#0" expanded="false" />
-            <element signature="e#13636#16933#0" expanded="false" />
-            <element signature="e#16982#17687#0" expanded="false" />
-            <element signature="e#17733#20804#0" expanded="false" />
-            <element signature="e#20853#21783#0" expanded="false" />
-            <element signature="e#21829#24908#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-          <folding>
-            <element signature="e#95#2271#0" expanded="false" />
-            <element signature="e#2317#5614#0" expanded="false" />
-            <element signature="e#5663#6368#0" expanded="false" />
-            <element signature="e#9534#10464#0" expanded="false" />
-            <element signature="e#10510#13593#0" expanded="false" />
-            <element signature="e#13643#16932#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evaluate_fddb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/face_48_fddb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="556" column="42" selection-start-line="556" selection-start-column="42" selection-end-line="556" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#5141#5330#0" expanded="false" />
-            <element signature="e#5365#5754#0" expanded="false" />
-            <element signature="e#5800#6371#0" expanded="false" />
-            <element signature="e#6401#7346#0" expanded="false" />
-            <element signature="e#7376#8383#0" expanded="false" />
-            <element signature="e#8414#9806#0" expanded="false" />
-            <element signature="e#9838#11337#0" expanded="false" />
-            <element signature="e#11415#13911#0" expanded="false" />
-            <element signature="e#13957#17688#0" expanded="false" />
-            <element signature="e#17737#18696#0" expanded="false" />
-            <element signature="e#18742#21813#0" expanded="false" />
-            <element signature="e#21862#22881#0" expanded="false" />
-            <element signature="e#22927#26010#0" expanded="false" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/face_12c_detect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="137" column="38" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.02583423">
+          <caret line="158" column="41" selection-start-line="138" selection-start-column="24" selection-end-line="158" selection-end-column="41" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#5151#5340#0" expanded="false" />
@@ -975,10 +803,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/face_48_fddb_fullconv.py">
+    <entry file="file://$PROJECT_DIR$/face_detection_example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6157158">
-          <caret line="542" column="14" selection-start-line="542" selection-start-column="14" selection-end-line="542" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.6458558">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+          <folding>
+            <element signature="e#95#2271#0" expanded="false" />
+            <element signature="e#2317#5614#0" expanded="false" />
+            <element signature="e#5663#6368#0" expanded="false" />
+            <element signature="e#9534#10464#0" expanded="false" />
+            <element signature="e#10510#13593#0" expanded="false" />
+            <element signature="e#13643#16932#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/many2oneText_fold.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluate_fddb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortROC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face_cascade_fullconv_quantize_fddb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="554" column="27" selection-start-line="554" selection-start-column="27" selection-end-line="554" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#5058#5247#0" expanded="false" />
+            <element signature="e#5282#5671#0" expanded="false" />
+            <element signature="e#5717#6288#0" expanded="false" />
+            <element signature="e#6318#7263#0" expanded="false" />
+            <element signature="e#7293#8300#0" expanded="false" />
+            <element signature="e#8331#9723#0" expanded="false" />
+            <element signature="e#9755#11254#0" expanded="false" />
+            <element signature="e#13788#17519#0" expanded="false" />
+            <element signature="e#17568#18527#0" expanded="false" />
+            <element signature="e#18573#21644#0" expanded="false" />
+            <element signature="e#21693#22712#0" expanded="false" />
+            <element signature="e#22758#25841#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face_cascade_fddb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.9691253">
+          <caret line="478" column="0" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#5141#5330#0" expanded="false" />
+            <element signature="e#5365#5754#0" expanded="false" />
+            <element signature="e#5800#6371#0" expanded="false" />
+            <element signature="e#6401#7346#0" expanded="false" />
+            <element signature="e#7376#8383#0" expanded="false" />
+            <element signature="e#8414#9806#0" expanded="false" />
+            <element signature="e#9838#11337#0" expanded="false" />
+            <element signature="e#13957#17688#0" expanded="false" />
+            <element signature="e#17737#18696#0" expanded="false" />
+            <element signature="e#18742#21813#0" expanded="false" />
+            <element signature="e#21862#22881#0" expanded="false" />
+            <element signature="e#22927#26010#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face_cascade_fullconv_fddb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.6054888">
+          <caret line="546" column="27" selection-start-line="546" selection-start-column="27" selection-end-line="546" selection-end-column="27" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#4816#5005#0" expanded="false" />
@@ -988,11 +911,11 @@
             <element signature="e#7051#8058#0" expanded="false" />
             <element signature="e#8089#9481#0" expanded="false" />
             <element signature="e#9513#11012#0" expanded="false" />
-            <element signature="e#13546#17277#0" expanded="false" />
-            <element signature="e#17326#18285#0" expanded="false" />
-            <element signature="e#18331#21402#0" expanded="false" />
-            <element signature="e#21451#22470#0" expanded="false" />
-            <element signature="e#22516#25599#0" expanded="false" />
+            <element signature="e#13545#17276#0" expanded="false" />
+            <element signature="e#17325#18284#0" expanded="false" />
+            <element signature="e#18330#21401#0" expanded="false" />
+            <element signature="e#21450#22469#0" expanded="false" />
+            <element signature="e#22515#25598#0" expanded="false" />
           </folding>
         </state>
       </provider>
