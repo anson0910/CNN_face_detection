@@ -30,13 +30,22 @@ def round_number(num, fixedPointList):
     :param fixedPointList:
     :return: quantized number
     '''
-    result = fixedPointList[0]
-    minDistance = abs(num - fixedPointList[0])
+    low = 0
+    high = len(fixedPointList)
+    result = 0
 
-    for currentNumber in fixedPointList:
-        if abs(num - currentNumber) < minDistance:
-            result = currentNumber
-            minDistance = abs(num - currentNumber)
+    while low < high:
+        midIdx = (low + high) / 2
+        result = fixedPointList[midIdx]
+        minDistance = abs(num - result)
+        leftIdx = midIdx - 1
+        rightIdx = midIdx + 1
+        if leftIdx > -1 and abs(num - fixedPointList[leftIdx]) < minDistance:
+            high = midIdx
+        elif rightIdx < len(fixedPointList) and abs(num - fixedPointList[rightIdx]) < minDistance:
+            low = midIdx + 1
+        else:
+            break
 
     return result
 
