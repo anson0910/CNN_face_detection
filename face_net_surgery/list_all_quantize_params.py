@@ -10,8 +10,8 @@ caffe_root = '/home/anson/caffe-master/'
 sys.path.insert(0, caffe_root + 'python')
 import caffe
 # =================================================================================
-modelDirList = ['face_12c', 'face_12_cal']#, 'face_24c']
-modelNameList = ['face12c_full_conv', 'face_12_cal']#, 'face_24c']
+modelDirList = ['face_12c', 'face_12_cal', 'face_24c']
+modelNameList = ['face12c_full_conv', 'face_12_cal', 'face_24c']
 
 for curModel in range(len(modelDirList)):
     for quantize_bit_num in range(3, 10):
