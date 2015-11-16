@@ -1,5 +1,8 @@
 import numpy as np
 import sys
+from quantize_functions import *
+
+stochasticRounding = True
 
 modelName = 'face_12_cal'
 modelFileName = 'face_12_cal_train_iter_400000.caffemodel'
@@ -23,31 +26,6 @@ def fixed_point_list(a, b):
         fixedPointList.append( -(2**a) + (2**(-b))*i )
 
     return fixedPointList
-def round_number(num, fixedPointList):
-    '''
-    Rounds num to closest number in fixedPointList
-    :param num:
-    :param fixedPointList:
-    :return: quantized number
-    '''
-    low = 0
-    high = len(fixedPointList)
-    result = 0
-
-    while low < high:
-        midIdx = (low + high) / 2
-        result = fixedPointList[midIdx]
-        minDistance = abs(num - result)
-        leftIdx = midIdx - 1
-        rightIdx = midIdx + 1
-        if leftIdx > -1 and abs(num - fixedPointList[leftIdx]) < minDistance:
-            high = midIdx
-        elif rightIdx < len(fixedPointList) and abs(num - fixedPointList[rightIdx]) < minDistance:
-            low = midIdx + 1
-        else:
-            break
-
-    return result
 
 # ==================  load face12c_full_conv  ======================================
 MODEL_FILE = '/home/anson/caffe-master/models/' + modelName + '/deploy.prototxt'
@@ -63,8 +41,12 @@ original_params = {pr: (net.params[pr][0].data, net.params[pr][1].data) for pr i
 for quantize_bit_num in range(3, 10):
     # ==================  load file to save quantized parameters  =======================
     MODEL_FILE = '/home/anson/caffe-master/models/' + modelName +'/deploy.prototxt'
-    PRETRAINED = '/home/anson/caffe-master/models/' + modelName + '/' + modelName + '_quantize_' \
-                 + str(quantize_bit_num) +'.caffemodel'
+    if stochasticRounding:
+        PRETRAINED = '/home/anson/caffe-master/models/' + modelName + '/' + modelName + '_SRquantize_' \
+                     + str(quantize_bit_num) +'.caffemodel'
+    else:
+        PRETRAINED = '/home/anson/caffe-master/models/' + modelName + '/' + modelName + '_quantize_' \
+                     + str(quantize_bit_num) +'.caffemodel'
     quantized_model = open(PRETRAINED, 'w')
     net_quantized = caffe.Net(MODEL_FILE, PRETRAINED, caffe.TEST)
     params_quantized = params
@@ -102,16 +84,17 @@ for quantize_bit_num in range(3, 10):
         weightFixedPointList = fixed_point_list(a_weight, b_weight)
         biasFixedPointList = fixed_point_list(a_bias, b_bias)
 
-        print ("Shape of " + k + " weight params : " + str(filters_weights.shape))
-        print ("Max : " + str(filters_weights.max()) + "  min : " + str(filters_weights.min()))
-        print ("Shape of " + k + " bias params: " + str(filters_bias.shape))
-        print ("Max : " + str(filters_bias.max()) + "  min : " + str(filters_bias.min()))
+        # print ("Shape of " + k + " weight params : " + str(filters_weights.shape))
+        # print ("Max : " + str(filters_weights.max()) + "  min : " + str(filters_weights.min()))
+        # print ("Shape of " + k + " bias params: " + str(filters_bias.shape))
+        # print ("Max : " + str(filters_bias.max()) + "  min : " + str(filters_bias.min()))
+        print "Quantizing to " + str(quantize_bit_num) + " bits."
 
         for currentNum in np.nditer(filters_weights, op_flags=['readwrite']):
-            currentNum[...] = round_number(currentNum[...], weightFixedPointList)
+            currentNum[...] = round_number(currentNum[...], weightFixedPointList, stochasticRounding)
 
         for currentNum in np.nditer(filters_bias, op_flags=['readwrite']):
-            currentNum[...] = round_number(currentNum[...], biasFixedPointList)
+            currentNum[...] = round_number(currentNum[...], biasFixedPointList, stochasticRounding)
 
     net_quantized.save(PRETRAINED)
 
