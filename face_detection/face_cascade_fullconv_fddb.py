@@ -210,7 +210,7 @@ def detect_face_12c(caffe_img, min_face_size, stride, multiScale=False):
     :return:    list of rectangles after global NMS
     '''
     net_kind = 12
-    scale_factor = 1.18
+    scale_factor = 1.414
     rectangles = []   # list of rectangles [x11, y11, x12, y12, confidence, current_scale] (corresponding to original image)
 
     current_scale = find_initial_scale(net_kind, min_face_size)     # find initial scale

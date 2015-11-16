@@ -21,49 +21,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="face_cascade_fullconv_quantize_fddb.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="face_cascade_fullconv_quantize_fddb.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/face_cascade_fullconv_quantize_fddb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="554" column="27" selection-start-line="554" selection-start-column="27" selection-end-line="554" selection-end-column="27" />
+            <state vertical-scroll-proportion="3.6408668">
+              <caret line="98" column="76" selection-start-line="98" selection-start-column="76" selection-end-line="98" selection-end-column="76" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#5058#5247#0" expanded="false" />
-                <element signature="e#5282#5671#0" expanded="false" />
-                <element signature="e#5717#6288#0" expanded="false" />
-                <element signature="e#6318#7263#0" expanded="false" />
-                <element signature="e#7293#8300#0" expanded="false" />
-                <element signature="e#8331#9723#0" expanded="false" />
-                <element signature="e#9755#11254#0" expanded="false" />
-                <element signature="e#13788#17519#0" expanded="false" />
-                <element signature="e#17568#18527#0" expanded="false" />
-                <element signature="e#18573#21644#0" expanded="false" />
-                <element signature="e#21693#22712#0" expanded="false" />
-                <element signature="e#22758#25841#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="face_cascade_fullconv_fddb.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/face_cascade_fullconv_fddb.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.6054888">
-              <caret line="546" column="27" selection-start-line="546" selection-start-column="27" selection-end-line="546" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#4816#5005#0" expanded="false" />
-                <element signature="e#5040#5429#0" expanded="false" />
-                <element signature="e#5475#6046#0" expanded="false" />
-                <element signature="e#6076#7021#0" expanded="false" />
-                <element signature="e#7051#8058#0" expanded="false" />
-                <element signature="e#8089#9481#0" expanded="false" />
-                <element signature="e#9513#11012#0" expanded="false" />
-                <element signature="e#13545#17276#0" expanded="false" />
-                <element signature="e#17325#18284#0" expanded="false" />
-                <element signature="e#18330#21401#0" expanded="false" />
-                <element signature="e#21450#22469#0" expanded="false" />
-                <element signature="e#22515#25598#0" expanded="false" />
+                <element signature="e#6173#6362#0" expanded="false" />
+                <element signature="e#6397#6786#0" expanded="false" />
+                <element signature="e#6832#7403#0" expanded="false" />
+                <element signature="e#7433#8378#0" expanded="false" />
+                <element signature="e#8408#9415#0" expanded="false" />
+                <element signature="e#9446#10838#0" expanded="false" />
+                <element signature="e#10870#12369#0" expanded="false" />
+                <element signature="e#14903#18634#0" expanded="false" />
+                <element signature="e#18683#19642#0" expanded="false" />
+                <element signature="e#19688#22759#0" expanded="false" />
+                <element signature="e#22808#23827#0" expanded="false" />
+                <element signature="e#23873#26956#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -108,6 +84,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="face_cascade_fullconv_fddb.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/face_cascade_fullconv_fddb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="212" column="24" selection-start-line="212" selection-start-column="24" selection-end-line="212" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#4816#5005#0" expanded="false" />
+                <element signature="e#5040#5429#0" expanded="false" />
+                <element signature="e#5475#6046#0" expanded="false" />
+                <element signature="e#6076#7021#0" expanded="false" />
+                <element signature="e#7051#8058#0" expanded="false" />
+                <element signature="e#8089#9481#0" expanded="false" />
+                <element signature="e#9513#11012#0" expanded="false" />
+                <element signature="e#13546#17277#0" expanded="false" />
+                <element signature="e#17326#18285#0" expanded="false" />
+                <element signature="e#18331#21402#0" expanded="false" />
+                <element signature="e#21451#22470#0" expanded="false" />
+                <element signature="e#22516#25599#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -139,8 +139,8 @@
         <option value="$PROJECT_DIR$/face_12c_detect.py" />
         <option value="$PROJECT_DIR$/face_48_fddb_fullconv.py" />
         <option value="$PROJECT_DIR$/detections/face_cascade_fullconv_quantize_fddb.py" />
-        <option value="$PROJECT_DIR$/face_cascade_fullconv_quantize_fddb.py" />
         <option value="$PROJECT_DIR$/face_cascade_fullconv_fddb.py" />
+        <option value="$PROJECT_DIR$/face_cascade_fullconv_quantize_fddb.py" />
       </list>
     </option>
   </component>
@@ -149,9 +149,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="79" />
-    <option name="y" value="-5" />
+    <option name="y" value="30" />
     <option name="width" value="1841" />
-    <option name="height" value="1085" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -192,6 +192,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -212,7 +213,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -221,10 +221,10 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/face_cascade_fullconv_fddb.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sortROC.py" />
     <property name="restartRequiresConfirmation" value="true" />
   </component>
-  <component name="RunManager" selected="Python.face_wacv">
+  <component name="RunManager" selected="Python.face_cascade_fullconv_quantize_fddb">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -347,25 +347,61 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="face_wacv" type="PythonConfigurationType" factoryName="Python">
+    <configuration default="false" name="evaluate_fddb" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda/bin/python2.7" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="untitled" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/face_cascade_fullconv_fddb.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evaluate_fddb.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Python.face_wacv" />
+    <configuration default="false" name="face_cascade_fullconv_quantize_fddb" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/face_cascade_fullconv_quantize_fddb.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="sortROC" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sortROC.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Python.evaluate_fddb" />
+      <item index="1" class="java.lang.String" itemvalue="Python.face_cascade_fullconv_quantize_fddb" />
+      <item index="2" class="java.lang.String" itemvalue="Python.sortROC" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -382,7 +418,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="79" y="-5" width="1841" height="1085" extended-state="6" />
+    <frame x="79" y="30" width="1841" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -392,7 +428,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2145573" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.265285" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35854924" sideWeight="0.49563795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29326424" sideWeight="0.49563795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20725389" sideWeight="0.50436205" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -434,9 +470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -444,7 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -452,9 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -477,9 +506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -487,7 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -495,9 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -520,9 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -530,7 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -553,9 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -563,7 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -586,9 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -596,7 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -619,9 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -629,7 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -652,9 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -662,7 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -685,9 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -695,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,9 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -720,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -743,9 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,9 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -784,22 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.02583423">
           <caret line="158" column="41" selection-start-line="138" selection-start-column="24" selection-end-line="158" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#5151#5340#0" expanded="false" />
-            <element signature="e#5375#5764#0" expanded="false" />
-            <element signature="e#5810#6381#0" expanded="false" />
-            <element signature="e#6411#7356#0" expanded="false" />
-            <element signature="e#7386#8393#0" expanded="false" />
-            <element signature="e#8424#9816#0" expanded="false" />
-            <element signature="e#9848#11347#0" expanded="false" />
-            <element signature="e#11425#13921#0" expanded="false" />
-            <element signature="e#13967#17698#0" expanded="false" />
-            <element signature="e#17747#18706#0" expanded="false" />
-            <element signature="e#18752#21823#0" expanded="false" />
-            <element signature="e#21872#22891#0" expanded="false" />
-            <element signature="e#22937#26020#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -807,8 +779,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6458558">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/many2oneText_fold.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face_cascade_fddb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.9691253">
+          <caret line="478" column="0" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="false" />
+            <element signature="e#5141#5330#0" expanded="false" />
+            <element signature="e#5365#5754#0" expanded="false" />
+            <element signature="e#5800#6371#0" expanded="false" />
+            <element signature="e#6401#7346#0" expanded="false" />
+            <element signature="e#7376#8383#0" expanded="false" />
+            <element signature="e#8414#9806#0" expanded="false" />
+            <element signature="e#9838#11337#0" expanded="false" />
+            <element signature="e#13957#17688#0" expanded="false" />
+            <element signature="e#17737#18696#0" expanded="false" />
+            <element signature="e#18742#21813#0" expanded="false" />
+            <element signature="e#21862#22881#0" expanded="false" />
+            <element signature="e#22927#26010#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -828,20 +826,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/many2oneText_fold.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/evaluate_fddb.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face_cascade_fullconv_fddb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="212" column="24" selection-start-line="212" selection-start-column="24" selection-end-line="212" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#4816#5005#0" expanded="false" />
+            <element signature="e#5040#5429#0" expanded="false" />
+            <element signature="e#5475#6046#0" expanded="false" />
+            <element signature="e#6076#7021#0" expanded="false" />
+            <element signature="e#7051#8058#0" expanded="false" />
+            <element signature="e#8089#9481#0" expanded="false" />
+            <element signature="e#9513#11012#0" expanded="false" />
+            <element signature="e#13546#17277#0" expanded="false" />
+            <element signature="e#17326#18285#0" expanded="false" />
+            <element signature="e#18331#21402#0" expanded="false" />
+            <element signature="e#21451#22470#0" expanded="false" />
+            <element signature="e#22516#25599#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -856,66 +868,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/face_cascade_fullconv_quantize_fddb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="554" column="27" selection-start-line="554" selection-start-column="27" selection-end-line="554" selection-end-column="27" />
+        <state vertical-scroll-proportion="3.6408668">
+          <caret line="98" column="76" selection-start-line="98" selection-start-column="76" selection-end-line="98" selection-end-column="76" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#5058#5247#0" expanded="false" />
-            <element signature="e#5282#5671#0" expanded="false" />
-            <element signature="e#5717#6288#0" expanded="false" />
-            <element signature="e#6318#7263#0" expanded="false" />
-            <element signature="e#7293#8300#0" expanded="false" />
-            <element signature="e#8331#9723#0" expanded="false" />
-            <element signature="e#9755#11254#0" expanded="false" />
-            <element signature="e#13788#17519#0" expanded="false" />
-            <element signature="e#17568#18527#0" expanded="false" />
-            <element signature="e#18573#21644#0" expanded="false" />
-            <element signature="e#21693#22712#0" expanded="false" />
-            <element signature="e#22758#25841#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/face_cascade_fddb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.9691253">
-          <caret line="478" column="0" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#5141#5330#0" expanded="false" />
-            <element signature="e#5365#5754#0" expanded="false" />
-            <element signature="e#5800#6371#0" expanded="false" />
-            <element signature="e#6401#7346#0" expanded="false" />
-            <element signature="e#7376#8383#0" expanded="false" />
-            <element signature="e#8414#9806#0" expanded="false" />
-            <element signature="e#9838#11337#0" expanded="false" />
-            <element signature="e#13957#17688#0" expanded="false" />
-            <element signature="e#17737#18696#0" expanded="false" />
-            <element signature="e#18742#21813#0" expanded="false" />
-            <element signature="e#21862#22881#0" expanded="false" />
-            <element signature="e#22927#26010#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/face_cascade_fullconv_fddb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.6054888">
-          <caret line="546" column="27" selection-start-line="546" selection-start-column="27" selection-end-line="546" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#4816#5005#0" expanded="false" />
-            <element signature="e#5040#5429#0" expanded="false" />
-            <element signature="e#5475#6046#0" expanded="false" />
-            <element signature="e#6076#7021#0" expanded="false" />
-            <element signature="e#7051#8058#0" expanded="false" />
-            <element signature="e#8089#9481#0" expanded="false" />
-            <element signature="e#9513#11012#0" expanded="false" />
-            <element signature="e#13545#17276#0" expanded="false" />
-            <element signature="e#17325#18284#0" expanded="false" />
-            <element signature="e#18330#21401#0" expanded="false" />
-            <element signature="e#21450#22469#0" expanded="false" />
-            <element signature="e#22515#25598#0" expanded="false" />
+            <element signature="e#6173#6362#0" expanded="false" />
+            <element signature="e#6397#6786#0" expanded="false" />
+            <element signature="e#6832#7403#0" expanded="false" />
+            <element signature="e#7433#8378#0" expanded="false" />
+            <element signature="e#8408#9415#0" expanded="false" />
+            <element signature="e#9446#10838#0" expanded="false" />
+            <element signature="e#10870#12369#0" expanded="false" />
+            <element signature="e#14903#18634#0" expanded="false" />
+            <element signature="e#18683#19642#0" expanded="false" />
+            <element signature="e#19688#22759#0" expanded="false" />
+            <element signature="e#22808#23827#0" expanded="false" />
+            <element signature="e#23873#26956#0" expanded="false" />
           </folding>
         </state>
       </provider>

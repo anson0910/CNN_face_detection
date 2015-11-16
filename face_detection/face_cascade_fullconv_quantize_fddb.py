@@ -3,7 +3,8 @@ import cv2
 import time
 from operator import itemgetter
 
-quantizeBitNum = 3
+stochasticRoundedParams = False
+quantizeBitNum = 9
 
 # ==================  caffe  ======================================
 caffe_root = '/home/anson/caffe-master/'  # this file is expected to be in {caffe_root}/examples
@@ -14,16 +15,24 @@ import caffe
 # Set the right path to your model definition file, pretrained model weights,
 # and the image you would like to classify.
 MODEL_FILE = '/home/anson/caffe-master/models/face_12c/face12c_full_conv.prototxt'
-PRETRAINED = '/home/anson/caffe-master/models/face_12c/face12c_full_conv_quantize_' \
+if stochasticRoundedParams:
+    PRETRAINED = '/home/anson/caffe-master/models/face_12c/face12c_full_conv_SRquantize_' \
              + str(quantizeBitNum) + '.caffemodel'
+else:
+    PRETRAINED = '/home/anson/caffe-master/models/face_12c/face12c_full_conv_quantize_' \
+                 + str(quantizeBitNum) + '.caffemodel'
 caffe.set_mode_gpu()
 net_12c_full_conv = caffe.Net(MODEL_FILE, PRETRAINED, caffe.TEST)
 # ==================  load face_12_cal  ======================================
 # Set the right path to your model definition file, pretrained model weights,
 # and the image you would like to classify.
 MODEL_FILE = '/home/anson/caffe-master/models/face_12_cal/deploy.prototxt'
-PRETRAINED = '/home/anson/caffe-master/models/face_12_cal/face_12_cal_quantize_' \
+if stochasticRoundedParams:
+    PRETRAINED = '/home/anson/caffe-master/models/face_12_cal/face_12_cal_SRquantize_' \
              + str(quantizeBitNum) + '.caffemodel'
+else:
+    PRETRAINED = '/home/anson/caffe-master/models/face_12_cal/face_12_cal_quantize_' \
+                 + str(quantizeBitNum) + '.caffemodel'
 caffe.set_mode_gpu()
 net_12_cal = caffe.Classifier(MODEL_FILE, PRETRAINED,
                        mean=np.load(caffe_root + 'python/caffe/imagenet/ilsvrc_2012_mean.npy').mean(1).mean(1),
@@ -35,8 +44,12 @@ net_12_cal = caffe.Classifier(MODEL_FILE, PRETRAINED,
 # Set the right path to your model definition file, pretrained model weights,
 # and the image you would like to classify.
 MODEL_FILE = '/home/anson/caffe-master/models/face_24c/deploy.prototxt'
-PRETRAINED = '/home/anson/caffe-master/models/face_24c/face_24c_quantize_' \
+if stochasticRoundedParams:
+    PRETRAINED = '/home/anson/caffe-master/models/face_24c/face_24c_SRquantize_' \
              + str(quantizeBitNum) + '.caffemodel'
+else:
+    PRETRAINED = '/home/anson/caffe-master/models/face_24c/face_24c_quantize_' \
+                 + str(quantizeBitNum) + '.caffemodel'
 caffe.set_mode_gpu()
 net_24c = caffe.Classifier(MODEL_FILE, PRETRAINED,
                        mean=np.load(caffe_root + 'python/caffe/imagenet/ilsvrc_2012_mean.npy').mean(1).mean(1),
@@ -48,8 +61,12 @@ net_24c = caffe.Classifier(MODEL_FILE, PRETRAINED,
 # Set the right path to your model definition file, pretrained model weights,
 # and the image you would like to classify.
 MODEL_FILE = '/home/anson/caffe-master/models/face_24_cal/deploy.prototxt'
-PRETRAINED = '/home/anson/caffe-master/models/face_24_cal/face_24_cal_quantize_' \
+if stochasticRoundedParams:
+    PRETRAINED = '/home/anson/caffe-master/models/face_24_cal/face_24_cal_SRquantize_' \
              + str(quantizeBitNum) + '.caffemodel'
+else:
+    PRETRAINED = '/home/anson/caffe-master/models/face_24_cal/face_24_cal_quantize_' \
+                 + str(quantizeBitNum) + '.caffemodel'
 caffe.set_mode_gpu()
 net_24_cal = caffe.Classifier(MODEL_FILE, PRETRAINED,
                        mean=np.load(caffe_root + 'python/caffe/imagenet/ilsvrc_2012_mean.npy').mean(1).mean(1),
@@ -61,8 +78,12 @@ net_24_cal = caffe.Classifier(MODEL_FILE, PRETRAINED,
 # Set the right path to your model definition file, pretrained model weights,
 # and the image you would like to classify.
 MODEL_FILE = '/home/anson/caffe-master/models/face_48c/deploy.prototxt'
-PRETRAINED = '/home/anson/caffe-master/models/face_48c/face_48c_quantize_' \
+if stochasticRoundedParams:
+    PRETRAINED = '/home/anson/caffe-master/models/face_48c/face_48c_SRquantize_' \
              + str(quantizeBitNum) + '.caffemodel'
+else:
+    PRETRAINED = '/home/anson/caffe-master/models/face_48c/face_48c_quantize_' \
+                 + str(quantizeBitNum) + '.caffemodel'
 caffe.set_mode_gpu()
 net_48c = caffe.Classifier(MODEL_FILE, PRETRAINED,
                        mean=np.load(caffe_root + 'python/caffe/imagenet/ilsvrc_2012_mean.npy').mean(1).mean(1),
@@ -74,8 +95,12 @@ net_48c = caffe.Classifier(MODEL_FILE, PRETRAINED,
 # Set the right path to your model definition file, pretrained model weights,
 # and the image you would like to classify.
 MODEL_FILE = '/home/anson/caffe-master/models/face_48_cal/deploy.prototxt'
-PRETRAINED = '/home/anson/caffe-master/models/face_48_cal/face_48_cal_quantize_' \
+if stochasticRoundedParams:
+    PRETRAINED = '/home/anson/caffe-master/models/face_48_cal/face_48_cal_SRquantize_' \
              + str(quantizeBitNum) + '.caffemodel'
+else:
+    PRETRAINED = '/home/anson/caffe-master/models/face_48_cal/face_48_cal_quantize_' \
+                 + str(quantizeBitNum) + '.caffemodel'
 caffe.set_mode_gpu()
 net_48_cal = caffe.Classifier(MODEL_FILE, PRETRAINED,
                        mean=np.load(caffe_root + 'python/caffe/imagenet/ilsvrc_2012_mean.npy').mean(1).mean(1),
