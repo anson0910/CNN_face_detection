@@ -45,7 +45,7 @@ def detect_face_12c(caffe_img, min_face_size, stride, multiScale=False):
     :param multiScale: whether to find faces under multiple scales or not
     :return:    list of rectangles after global NMS
     '''
-    multiScale = True
+    # multiScale = True
     net_kind = 12
     scale_factor = 1.18
     rectangles = []   # list of rectangles [x11, y11, x12, y12, confidence, current_scale] (corresponding to original image)
@@ -62,10 +62,11 @@ def detect_face_12c(caffe_img, min_face_size, stride, multiScale=False):
         # run net and take argmax for prediction
         net_12c_full_conv.forward()
         # out = net_48c_full_conv.blobs['prob'].data[0].argmax(axis=0)
-        out = net_12c_full_conv.blobs['prob'].data[0][1, :, :]
-        out_height, out_width, channels = out.shape
 
-        threshold = 0.03
+        out = net_12c_full_conv.blobs['prob'].data[0][1, :, :]
+        out_height, out_width = out.shape
+
+        threshold = 0.05
 
         for current_y in range(0, out_height):
             for current_x in range(0, out_width):
@@ -94,11 +95,11 @@ img = np.array(img, dtype=np.float32)
 img -= np.array((104.00698793, 116.66876762, 122.67891434))
 
 
-
 start = time.clock()
 
 min_face_size = 40
 stride = 5
+rectangles = detect_face_12c(img, min_face_size, stride)
 
 # print caffe_img_resized.shape
 
