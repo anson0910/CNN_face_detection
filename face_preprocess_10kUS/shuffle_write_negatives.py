@@ -1,14 +1,30 @@
 import os
 import random
 
-data_base_dir = "/home/anson/face_pictures/negatives"     # directory containing files of positives
-start_neg_dir = 98
-end_neg_dir = 98
-file_list = []      # list to save image names
+trainingNet = 12
 
-# load and open files to read and write
-write_file_name = '/home/anson/caffe-master/data/face/all_negatives_48c.txt'
+data_base_dir = "/home/anson/face_pictures/negatives"     # directory containing files of positives
+
+if trainingNet == 12:
+    start_neg_dir = 1
+    end_neg_dir = 33
+    # load and open files to read and write
+    write_file_name = '/home/anson/caffe-master/data/face/all_negatives.txt'
+elif trainingNet == 24:
+    start_neg_dir = 98
+    end_neg_dir = 98
+    # load and open files to read and write
+    write_file_name = '/home/anson/caffe-master/data/face/all_negatives_24c.txt'
+elif trainingNet == 48:
+    start_neg_dir = 99
+    end_neg_dir = 99
+    # load and open files to read and write
+    write_file_name = '/home/anson/caffe-master/data/face/all_negatives_48c.txt'
+
+
 write_file = open(write_file_name, "w")
+
+file_list = []      # list to save image names
 
 for current_neg_dir in range(start_neg_dir, end_neg_dir + 1):
     current_dir = data_base_dir + '/negative_' + str(current_neg_dir).zfill(2)
