@@ -3,36 +3,41 @@ import cv2
 import shutil
 import random
 
+trainingNet = 12
+
 # load and open files to read and write
 # =================== face_12c =================================
-# pos_file_name = '/home/anson/caffe-master/data/face/all_positives.txt'
-# neg_file_name = '/home/anson/caffe-master/data/face/all_negatives.txt'
-# train_file_name = '/home/anson/face_pictures/train_12c'
-# val_file_name = '/home/anson/face_pictures/val'
-# write_train_name = '/home/anson/caffe-master/data/face/train_12c.txt'
-# write_train = open(write_train_name, "w")
-# write_val_name = '/home/anson/caffe-master/data/face/val.txt'
-# write_val = open(write_val_name, "w")
+if trainingNet == 12:
+    pos_file_name = '/home/anson/caffe-master/data/face/all_positives.txt'
+    neg_file_name = '/home/anson/caffe-master/data/face/all_negatives.txt'
+    train_file_name = '/home/anson/face_pictures/train_12c'
+    val_file_name = '/home/anson/face_pictures/val'
+    write_train_name = '/home/anson/caffe-master/data/face/train_12c.txt'
+    write_train = open(write_train_name, "w")
+    write_val_name = '/home/anson/caffe-master/data/face/val.txt'
+    write_val = open(write_val_name, "w")
 
 # =================== face_24c =================================
-# pos_file_name = '/home/anson/caffe-master/data/face/all_positives.txt'
-# neg_file_name = '/home/anson/caffe-master/data/face/all_negatives_24c.txt'
-# train_file_name = '/home/anson/face_pictures/train_24c'
-# val_file_name = '/home/anson/face_pictures/val'
-# write_train_name = '/home/anson/caffe-master/data/face/train_24c.txt'
-# write_train = open(write_train_name, "w")
-# write_val_name = '/home/anson/caffe-master/data/face/val.txt'
-# write_val = open(write_val_name, "w")
+elif trainingNet == 24:
+    pos_file_name = '/home/anson/caffe-master/data/face/all_positives.txt'
+    neg_file_name = '/home/anson/caffe-master/data/face/all_negatives_24c.txt'
+    train_file_name = '/home/anson/face_pictures/train_24c'
+    val_file_name = '/home/anson/face_pictures/val'
+    write_train_name = '/home/anson/caffe-master/data/face/train_24c.txt'
+    write_train = open(write_train_name, "w")
+    write_val_name = '/home/anson/caffe-master/data/face/val.txt'
+    write_val = open(write_val_name, "w")
 
 # =================== face_48c =================================
-pos_file_name = '/home/anson/caffe-master/data/face/all_positives.txt'
-neg_file_name = '/home/anson/caffe-master/data/face/all_negatives_48c.txt'
-train_file_name = '/home/anson/face_pictures/train_48c'
-val_file_name = '/home/anson/face_pictures/val'
-write_train_name = '/home/anson/caffe-master/data/face/train_48c.txt'
-write_train = open(write_train_name, "w")
-write_val_name = '/home/anson/caffe-master/data/face/val.txt'
-write_val = open(write_val_name, "w")
+elif trainingNet == 48:
+    pos_file_name = '/home/anson/caffe-master/data/face/all_positives.txt'
+    neg_file_name = '/home/anson/caffe-master/data/face/all_negatives_48c.txt'
+    train_file_name = '/home/anson/face_pictures/train_48c'
+    val_file_name = '/home/anson/face_pictures/val'
+    write_train_name = '/home/anson/caffe-master/data/face/train_48c.txt'
+    write_train = open(write_train_name, "w")
+    write_val_name = '/home/anson/caffe-master/data/face/val.txt'
+    write_val = open(write_val_name, "w")
 
 
 pos = []
