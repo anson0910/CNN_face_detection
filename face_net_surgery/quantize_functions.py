@@ -1,3 +1,4 @@
+import math
 import random
 
 def round_number_hard(num, fixedPointList):
@@ -100,3 +101,42 @@ def fixed_point_list(a, b):
         fixedPointList.append( -(2**a) + (2**(-b))*i )
 
     return fixedPointList
+
+def tri_section_points(a):
+    '''
+    Returns three points (-2^a / 2, 0, 2^a / 2)
+    :param nIn: number of neurons in input layer (filter input neurons for conv layers)
+    :param nOut: number of neurons in output layer (1 for conv layers)
+    :return: list with 3 numbers
+    '''
+    triSectionPoints = [-(2**a) / 2, 0, (2**a) / 2]
+
+    return triSectionPoints
+
+def soft_quantize_rounding(num, a, stochastic = False):
+    '''
+    Does hard quantizing after soft quantizing is done (rounds number to -1 0 1)
+    :param num: number to quantize
+    :param a: During soft quantizing, params are rounded to (-2^a / 2, 0, 2^a / 2)
+    :param stochastic: decides whether to apply stochastic rounding
+    :return: quantized number
+    '''
+    if stochastic == False:
+        if num < -(2**a) / 4:
+            return -1
+        elif num > (2**a) / 4:
+            return 1
+        else:
+            return 0
+
+# def tri_section_points(nIn, nOut):
+#     '''
+#     Tri section point initialization method in peihen's oral_rehearsal P.21
+#     :param nIn: number of neurons in input layer (filter input neurons for conv layers)
+#     :param nOut: number of neurons in output layer (1 for conv layers)
+#     :return: list with 3 numbers
+#     '''
+#     triSectionPoints = [-2 * math.sqrt(6) / (3 * math.sqrt(nIn + nOut)), 0,
+#                         2 * math.sqrt(6) / (3 * math.sqrt(nIn + nOut))]
+#
+#     return triSectionPoints

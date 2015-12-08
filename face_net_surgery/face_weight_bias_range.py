@@ -126,3 +126,5 @@ for k, v in net.params.items():
     print ("Max : " + str(filters_weights.max()) + "  min : " + str(filters_weights.min()))
     print ("Shape of " + k + " bias params: " + str(filters_bias.shape))
     print ("Max : " + str(filters_bias.max()) + "  min : " + str(filters_bias.min()))
+
+file_write.close()

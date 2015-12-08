@@ -14,11 +14,15 @@ import sys
 sys.path.insert(0, caffe_root + 'python')
 import caffe
 
+softQuantize = True
+quantizeBitNum = 2
+
 # ==================  load face_12c  ======================================
-# Set the right path to your model definition file, pretrained model weights,
-# and the image you would like to classify.
 MODEL_FILE = '/home/anson/caffe-master/models/face_12c/deploy.prototxt'
-PRETRAINED = '/home/anson/caffe-master/models/face_12c/face_12c_train_iter_400000.caffemodel'
+if softQuantize:
+    PRETRAINED = '/home/anson/caffe-master/models/face_12c/face_12c_soft_quantize_2.caffemodel'
+else:
+    PRETRAINED = '/home/anson/caffe-master/models/face_12c/face_12c_train_iter_400000.caffemodel'
 caffe.set_mode_gpu()
 net = caffe.Net(MODEL_FILE, PRETRAINED, caffe.TEST)
 
@@ -32,7 +36,10 @@ for fc in params:
 
 # Load the fully convolutional network to transplant the parameters.
 MODEL_FILE = '/home/anson/caffe-master/models/face_12c/face12c_full_conv.prototxt'
-PRETRAINED = '/home/anson/caffe-master/models/face_12c/face_12c_train_iter_400000.caffemodel'
+if softQuantize:
+    PRETRAINED = '/home/anson/caffe-master/models/face_12c/face_12c_soft_quantize_2.caffemodel'
+else:
+    PRETRAINED = '/home/anson/caffe-master/models/face_12c/face_12c_train_iter_400000.caffemodel'
 net_full_conv = caffe.Net(MODEL_FILE, PRETRAINED, caffe.TEST)
 params_full_conv = ['fc2-conv', 'fc3-conv']
 # conv_params = {name: (weights, biases)}
@@ -46,4 +53,7 @@ for pr, pr_conv in zip(params, params_full_conv):
     conv_params[pr_conv][0].flat = fc_params[pr][0].flat  # flat unrolls the arrays
     conv_params[pr_conv][1][...] = fc_params[pr][1]
 
-net_full_conv.save('/home/anson/caffe-master/models/face_12c/face12c_full_conv.caffemodel')
+if softQuantize:
+    net_full_conv.save('/home/anson/caffe-master/models/face_12c/face12c_full_conv_soft_quantize_2.caffemodel')
+else:
+    net_full_conv.save('/home/anson/caffe-master/models/face_12c/face12c_full_conv.caffemodel')

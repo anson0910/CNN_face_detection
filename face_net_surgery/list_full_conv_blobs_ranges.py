@@ -9,6 +9,8 @@ sys.path.append('../face_detection')
 from load_model_functions import *
 from face_detection_functions import *
 
+writeRangeFile = open('full_conv_blobs_ranges.txt', 'w')
+
 # ==================  caffe  ======================================
 caffe_root = '/home/anson/caffe-master/'  # this file is expected to be in {caffe_root}/examples
 sys.path.insert(0, caffe_root + 'python')
@@ -16,18 +18,168 @@ import caffe
 # ==================  load models  ======================================
 net_12c_full_conv, net_12_cal, net_24c, net_24_cal, net_48c, net_48_cal = \
     load_face_models()
-# ==========================================================================
 # save each blob's max and min
 net12_range = [0] * 12  # net12 has 6 blobs (data max, data min, conv1 max, ... )
 net12cal_range = [0] * 12
 net24_range = [0] * 12
 net24cal_range = [0] * 12
-net48_range = [0] * 20
-net48cal_range = [0] * 20
+net48_range = [0] * 16
+net48cal_range = [0] * 16
 
+# ==========================================================================
+def print_blob_ranges():
+    '''
+    print all blob ranges
+    '''
+    print "\n======= net_12c_full_conv ======="
+    for k, v in net_12c_full_conv.blobs.items():
+        print (k, v.data.shape)
+        if k == 'data':
+            maxBlob = net12_range[0]
+            minBlob = net12_range[1]
+        elif k == 'conv1':
+            maxBlob = net12_range[2]
+            minBlob = net12_range[3]
+        elif k == 'pool1':
+            maxBlob = net12_range[4]
+            minBlob = net12_range[5]
+        elif k == 'fc2-conv':
+            maxBlob = net12_range[6]
+            minBlob = net12_range[7]
+        elif k == 'fc3-conv':
+            maxBlob = net12_range[8]
+            minBlob = net12_range[9]
+        elif k == 'prob':
+            maxBlob = net12_range[10]
+            minBlob = net12_range[11]
+        print ("Max : " + str(maxBlob) + "  min : " + str(minBlob))
 
+    print "\n======= net_12_cal ======="
+    for k, v in net_12_cal.blobs.items():
+        print (k, v.data.shape)
+        if k == 'data':
+            maxBlob = net12cal_range[0]
+            minBlob = net12cal_range[1]
+        elif k == 'conv1':
+            maxBlob = net12cal_range[2]
+            minBlob = net12cal_range[3]
+        elif k == 'pool1':
+            maxBlob = net12cal_range[4]
+            minBlob = net12cal_range[5]
+        elif k == 'fc2':
+            maxBlob = net12cal_range[6]
+            minBlob = net12cal_range[7]
+        elif k == 'fc3':
+            maxBlob = net12cal_range[8]
+            minBlob = net12cal_range[9]
+        elif k == 'prob':
+            maxBlob = net12cal_range[10]
+            minBlob = net12cal_range[11]
+        print ("Max : " + str(maxBlob) + "  min : " + str(minBlob))
 
+    print "\n======= net_24c ======="
+    for k, v in net_24c.blobs.items():
+        print (k, v.data.shape)
+        if k == 'data':
+            maxBlob = net24_range[0]
+            minBlob = net24_range[1]
+        elif k == 'conv1':
+            maxBlob = net24_range[2]
+            minBlob = net24_range[3]
+        elif k == 'pool1':
+            maxBlob = net24_range[4]
+            minBlob = net24_range[5]
+        elif k == 'fc2':
+            maxBlob = net24_range[6]
+            minBlob = net24_range[7]
+        elif k == 'fc3':
+            maxBlob = net24_range[8]
+            minBlob = net24_range[9]
+        elif k == 'prob':
+            maxBlob = net24_range[10]
+            minBlob = net24_range[11]
+        print ("Max : " + str(maxBlob) + "  min : " + str(minBlob))
 
+    print "\n======= net_24_cal ======="
+    for k, v in net_24_cal.blobs.items():
+        print (k, v.data.shape)
+        if k == 'data':
+            maxBlob = net24cal_range[0]
+            minBlob = net24cal_range[1]
+        elif k == 'conv1':
+            maxBlob = net24cal_range[2]
+            minBlob = net24cal_range[3]
+        elif k == 'pool1':
+            maxBlob = net24cal_range[4]
+            minBlob = net24cal_range[5]
+        elif k == 'fc2':
+            maxBlob = net24cal_range[6]
+            minBlob = net24cal_range[7]
+        elif k == 'fc3':
+            maxBlob = net24cal_range[8]
+            minBlob = net24cal_range[9]
+        elif k == 'prob':
+            maxBlob = net24cal_range[10]
+            minBlob = net24cal_range[11]
+        print ("Max : " + str(maxBlob) + "  min : " + str(minBlob))
+
+    print "\n======= net_48c ======="
+    for k, v in net_48c.blobs.items():
+        print (k, v.data.shape)
+        if k == 'data':
+            maxBlob = net48_range[0]
+            minBlob = net48_range[1]
+        elif k == 'conv1':
+            maxBlob = net48_range[2]
+            minBlob = net48_range[3]
+        elif k == 'pool1':
+            maxBlob = net48_range[4]
+            minBlob = net48_range[5]
+        elif k == 'conv2':
+            maxBlob = net48_range[6]
+            minBlob = net48_range[7]
+        elif k == 'pool2':
+            maxBlob = net48_range[8]
+            minBlob = net48_range[9]
+        elif k == 'fc3':
+            maxBlob = net48_range[10]
+            minBlob = net48_range[11]
+        elif k == 'fc4':
+            maxBlob = net48_range[12]
+            minBlob = net48_range[13]
+        elif k == 'prob':
+            maxBlob = net48_range[14]
+            minBlob = net48_range[15]
+        print ("Max : " + str(maxBlob) + "  min : " + str(minBlob))
+
+    print "\n======= net_48_cal ======="
+    for k, v in net_48_cal.blobs.items():
+        print (k, v.data.shape)
+        if k == 'data':
+            maxBlob = net48cal_range[0]
+            minBlob = net48cal_range[1]
+        elif k == 'conv1':
+            maxBlob = net48cal_range[2]
+            minBlob = net48cal_range[3]
+        elif k == 'pool1':
+            maxBlob = net48cal_range[4]
+            minBlob = net48cal_range[5]
+        elif k == 'conv2':
+            maxBlob = net48cal_range[6]
+            minBlob = net48cal_range[7]
+        elif k == 'pool2':
+            maxBlob = net48cal_range[8]
+            minBlob = net48cal_range[9]
+        elif k == 'fc3':
+            maxBlob = net48cal_range[10]
+            minBlob = net48cal_range[11]
+        elif k == 'fc4':
+            maxBlob = net48cal_range[12]
+            minBlob = net48cal_range[13]
+        elif k == 'prob':
+            maxBlob = net48cal_range[14]
+            minBlob = net48cal_range[15]
+        print ("Max : " + str(maxBlob) + "  min : " + str(minBlob))
 def detect_face_12c(net_12c_full_conv, caffe_img, min_face_size, stride,
                     multiScale=False, scale_factor=1.414, threshold=0.05):
     '''
@@ -57,10 +209,37 @@ def detect_face_12c(net_12c_full_conv, caffe_img, min_face_size, stride,
         # print out.shape
         out_height, out_width = out.shape
 
-        print "\n======= net_12c_full_conv ======="
         for k, v in net_12c_full_conv.blobs.items():
-            print (k, v.data.shape)
-            print ("Max : " + str(v.data.max()) + "  min : " + str(v.data.min()))
+            if k == 'data':
+                if v.data.max() > net12_range[0]:
+                    net12_range[0] = v.data.max()
+                if v.data.min() < net12_range[1]:
+                    net12_range[1] = v.data.min()
+            elif k == 'conv1':
+                if v.data.max() > net12_range[2]:
+                    net12_range[2] = v.data.max()
+                if v.data.min() < net12_range[3]:
+                    net12_range[3] = v.data.min()
+            elif k == 'pool1':
+                if v.data.max() > net12_range[4]:
+                    net12_range[4] = v.data.max()
+                if v.data.min() < net12_range[5]:
+                    net12_range[5] = v.data.min()
+            elif k == 'fc2-conv':
+                if v.data.max() > net12_range[6]:
+                    net12_range[6] = v.data.max()
+                if v.data.min() < net12_range[7]:
+                    net12_range[7] = v.data.min()
+            elif k == 'fc3-conv':
+                if v.data.max() > net12_range[8]:
+                    net12_range[8] = v.data.max()
+                if v.data.min() < net12_range[9]:
+                    net12_range[9] = v.data.min()
+            elif k == 'prob':
+                if v.data.max() > net12_range[10]:
+                    net12_range[10] = v.data.max()
+                if v.data.min() < net12_range[11]:
+                    net12_range[11] = v.data.min()
 
         for current_y in range(0, out_height):
             for current_x in range(0, out_width):
@@ -105,10 +284,37 @@ def cal_face_12c(net_12_cal, caffe_img, rectangles):
 
     output_all = net_12_cal.predict(all_cropped_caffe_img)   # predict through caffe
 
-    print "\n======= net_12_cal ======="
     for k, v in net_12_cal.blobs.items():
-        print (k, v.data.shape)
-        print ("Max : " + str(v.data.max()) + "  min : " + str(v.data.min()))
+        if k == 'data':
+            if v.data.max() > net12cal_range[0]:
+                net12cal_range[0] = v.data.max()
+            if v.data.min() < net12cal_range[1]:
+                net12cal_range[1] = v.data.min()
+        elif k == 'conv1':
+            if v.data.max() > net12cal_range[2]:
+                net12cal_range[2] = v.data.max()
+            if v.data.min() < net12cal_range[3]:
+                net12cal_range[3] = v.data.min()
+        elif k == 'pool1':
+            if v.data.max() > net12cal_range[4]:
+                net12cal_range[4] = v.data.max()
+            if v.data.min() < net12cal_range[5]:
+                net12cal_range[5] = v.data.min()
+        elif k == 'fc2':
+            if v.data.max() > net12cal_range[6]:
+                net12cal_range[6] = v.data.max()
+            if v.data.min() < net12cal_range[7]:
+                net12cal_range[7] = v.data.min()
+        elif k == 'fc3':
+            if v.data.max() > net12cal_range[8]:
+                net12cal_range[8] = v.data.max()
+            if v.data.min() < net12cal_range[9]:
+                net12cal_range[9] = v.data.min()
+        elif k == 'prob':
+            if v.data.max() > net12cal_range[10]:
+                net12cal_range[10] = v.data.max()
+            if v.data.min() < net12cal_range[11]:
+                net12cal_range[11] = v.data.min()
 
     for cur_rect in range(len(rectangles)):
         cur_rectangle = rectangles[cur_rect]
@@ -197,10 +403,37 @@ def detect_face_24c(net_24c, caffe_img, rectangles):
 
     prediction_all = net_24c.predict(all_cropped_caffe_img)   # predict through caffe
 
-    print "======= net_24c ======="
     for k, v in net_24c.blobs.items():
-        print (k, v.data.shape)
-        print ("Max : " + str(v.data.max()) + "  min : " + str(v.data.min()))
+        if k == 'data':
+            if v.data.max() > net24_range[0]:
+                net24_range[0] = v.data.max()
+            if v.data.min() < net24_range[1]:
+                net24_range[1] = v.data.min()
+        elif k == 'conv1':
+            if v.data.max() > net24_range[2]:
+                net24_range[2] = v.data.max()
+            if v.data.min() < net24_range[3]:
+                net24_range[3] = v.data.min()
+        elif k == 'pool1':
+            if v.data.max() > net24_range[4]:
+                net24_range[4] = v.data.max()
+            if v.data.min() < net24_range[5]:
+                net24_range[5] = v.data.min()
+        elif k == 'fc2':
+            if v.data.max() > net24_range[6]:
+                net24_range[6] = v.data.max()
+            if v.data.min() < net24_range[7]:
+                net24_range[7] = v.data.min()
+        elif k == 'fc3':
+            if v.data.max() > net24_range[8]:
+                net24_range[8] = v.data.max()
+            if v.data.min() < net24_range[9]:
+                net24_range[9] = v.data.min()
+        elif k == 'prob':
+            if v.data.max() > net24_range[10]:
+                net24_range[10] = v.data.max()
+            if v.data.min() < net24_range[11]:
+                net24_range[11] = v.data.min()
 
     for cur_rect in range(len(rectangles)):
         confidence = prediction_all[cur_rect][1]
@@ -231,10 +464,37 @@ def cal_face_24c(net_24_cal, caffe_img, rectangles):
         cropped_caffe_img = caffe_img[original_y1:original_y2, original_x1:original_x2] # crop image
         output = net_24_cal.predict([cropped_caffe_img])   # predict through caffe
 
-        print "\n======= net_24_cal ======="
         for k, v in net_24_cal.blobs.items():
-            print (k, v.data.shape)
-            print ("Max : " + str(v.data.max()) + "  min : " + str(v.data.min()))
+            if k == 'data':
+                if v.data.max() > net24cal_range[0]:
+                    net24cal_range[0] = v.data.max()
+                if v.data.min() < net24cal_range[1]:
+                    net24cal_range[1] = v.data.min()
+            elif k == 'conv1':
+                if v.data.max() > net24cal_range[2]:
+                    net24cal_range[2] = v.data.max()
+                if v.data.min() < net24cal_range[3]:
+                    net24cal_range[3] = v.data.min()
+            elif k == 'pool1':
+                if v.data.max() > net24cal_range[4]:
+                    net24cal_range[4] = v.data.max()
+                if v.data.min() < net24cal_range[5]:
+                    net24cal_range[5] = v.data.min()
+            elif k == 'fc2':
+                if v.data.max() > net24cal_range[6]:
+                    net24cal_range[6] = v.data.max()
+                if v.data.min() < net24cal_range[7]:
+                    net24cal_range[7] = v.data.min()
+            elif k == 'fc3':
+                if v.data.max() > net24cal_range[8]:
+                    net24cal_range[8] = v.data.max()
+                if v.data.min() < net24cal_range[9]:
+                    net24cal_range[9] = v.data.min()
+            elif k == 'prob':
+                if v.data.max() > net24cal_range[10]:
+                    net24cal_range[10] = v.data.max()
+                if v.data.min() < net24cal_range[11]:
+                    net24cal_range[11] = v.data.min()
 
         prediction = output[0]      # (44, 1) ndarray
 
@@ -308,10 +568,47 @@ def detect_face_48c(net_48c, caffe_img, rectangles):
 
         prediction = net_48c.predict([cropped_caffe_img])   # predict through caffe
 
-        print "\n======= net_48c ======="
         for k, v in net_48c.blobs.items():
-            print (k, v.data.shape)
-            print ("Max : " + str(v.data.max()) + "  min : " + str(v.data.min()))
+            if k == 'data':
+                if v.data.max() > net48_range[0]:
+                    net48_range[0] = v.data.max()
+                if v.data.min() < net48_range[1]:
+                    net48_range[1] = v.data.min()
+            elif k == 'conv1':
+                if v.data.max() > net48_range[2]:
+                    net48_range[2] = v.data.max()
+                if v.data.min() < net48_range[3]:
+                    net48_range[3] = v.data.min()
+            elif k == 'pool1':
+                if v.data.max() > net48_range[4]:
+                    net48_range[4] = v.data.max()
+                if v.data.min() < net48_range[5]:
+                    net48_range[5] = v.data.min()
+            elif k == 'conv2':
+                if v.data.max() > net48_range[6]:
+                    net48_range[6] = v.data.max()
+                if v.data.min() < net48_range[7]:
+                    net48_range[7] = v.data.min()
+            elif k == 'pool2':
+                if v.data.max() > net48_range[8]:
+                    net48_range[8] = v.data.max()
+                if v.data.min() < net48_range[9]:
+                    net48_range[9] = v.data.min()
+            elif k == 'fc3':
+                if v.data.max() > net48_range[10]:
+                    net48_range[10] = v.data.max()
+                if v.data.min() < net48_range[11]:
+                    net48_range[11] = v.data.min()
+            elif k == 'fc4':
+                if v.data.max() > net48_range[12]:
+                    net48_range[12] = v.data.max()
+                if v.data.min() < net48_range[13]:
+                    net48_range[13] = v.data.min()
+            elif k == 'prob':
+                if v.data.max() > net48_range[14]:
+                    net48_range[14] = v.data.max()
+                if v.data.min() < net48_range[15]:
+                    net48_range[15] = v.data.min()
 
         confidence = prediction[0][1]
 
@@ -342,10 +639,47 @@ def cal_face_48c(net_48_cal, caffe_img, rectangles):
         cropped_caffe_img = caffe_img[original_y1:original_y2, original_x1:original_x2] # crop image
         output = net_48_cal.predict([cropped_caffe_img])   # predict through caffe
 
-        print "\n======= net_48_cal ======="
         for k, v in net_48_cal.blobs.items():
-            print (k, v.data.shape)
-            print ("Max : " + str(v.data.max()) + "  min : " + str(v.data.min()))
+            if k == 'data':
+                if v.data.max() > net48cal_range[0]:
+                    net48cal_range[0] = v.data.max()
+                if v.data.min() < net48cal_range[1]:
+                    net48cal_range[1] = v.data.min()
+            elif k == 'conv1':
+                if v.data.max() > net48cal_range[2]:
+                    net48cal_range[2] = v.data.max()
+                if v.data.min() < net48cal_range[3]:
+                    net48cal_range[3] = v.data.min()
+            elif k == 'pool1':
+                if v.data.max() > net48cal_range[4]:
+                    net48cal_range[4] = v.data.max()
+                if v.data.min() < net48cal_range[5]:
+                    net48cal_range[5] = v.data.min()
+            elif k == 'conv2':
+                if v.data.max() > net48cal_range[6]:
+                    net48cal_range[6] = v.data.max()
+                if v.data.min() < net48cal_range[7]:
+                    net48cal_range[7] = v.data.min()
+            elif k == 'pool2':
+                if v.data.max() > net48cal_range[8]:
+                    net48cal_range[8] = v.data.max()
+                if v.data.min() < net48cal_range[9]:
+                    net48cal_range[9] = v.data.min()
+            elif k == 'fc3':
+                if v.data.max() > net48cal_range[10]:
+                    net48cal_range[10] = v.data.max()
+                if v.data.min() < net48cal_range[11]:
+                    net48cal_range[11] = v.data.min()
+            elif k == 'fc4':
+                if v.data.max() > net48cal_range[12]:
+                    net48cal_range[12] = v.data.max()
+                if v.data.min() < net48cal_range[13]:
+                    net48cal_range[13] = v.data.min()
+            elif k == 'prob':
+                if v.data.max() > net48cal_range[14]:
+                    net48cal_range[14] = v.data.max()
+                if v.data.min() < net48cal_range[15]:
+                    net48cal_range[15] = v.data.min()
 
         prediction = output[0]      # (44, 1) ndarray
 
@@ -399,40 +733,46 @@ def cal_face_48c(net_48_cal, caffe_img, rectangles):
 
     return result
 
+# ==========================================================================
+# load and open files to read and write
+for current_file in range(1, 11):
 
-image_file_name = '/home/anson/FDDB/originalPics/2002/07/19/big/img_391.jpg'
+    print 'Processing file ' + str(current_file) + ' ...'
 
-img = cv2.imread(image_file_name)     # BGR
-caffe_image = np.true_divide(img, 255)      # convert to caffe style (0~1 BGR)
-caffe_image = caffe_image[:, :, (2, 1, 0)]
-img_forward = np.array(img, dtype=np.float32)
-img_forward -= np.array((104, 117, 123))
+    read_file_name = '../face_detection/FDDB-fold/FDDB-fold-' + str(current_file).zfill(2) + '.txt'
 
+    with open(read_file_name, "r") as ins:
+        array = []
+        for line in ins:
+            array.append(line)      # list of strings
 
-start = time.clock()
+    number_of_images = len(array)
 
-min_face_size = 40
-stride = 5
-rectangles = detect_face_12c(net_12c_full_conv, img_forward, min_face_size, stride, False)     # detect faces
-rectangles = cal_face_12c(net_12_cal, caffe_image, rectangles)      # calibration
-rectangles = localNMS(rectangles)      # apply local NMS
-rectangles = detect_face_24c(net_24c, caffe_image, rectangles)
-rectangles = cal_face_24c(net_24_cal, caffe_image, rectangles)      # calibration
-rectangles = localNMS(rectangles)      # apply local NMS
-rectangles = detect_face_48c(net_48c, caffe_image, rectangles)
-rectangles = globalNMS(rectangles)      # apply global NMS
-rectangles = cal_face_48c(net_48_cal, caffe_image, rectangles)      # calibration
+    for current_image in range(number_of_images):
+        if current_image % 10 == 0:
+            print 'Processing image : ' + str(current_image)
+        # load image and convert to gray
+        read_img_name = '/home/anson/FDDB/originalPics/' + array[current_image].rstrip() + '.jpg'
+        img = cv2.imread(read_img_name)     # BGR
 
-# print caffe_img_resized.shape
+        min_face_size = 40
+        stride = 5
 
+        caffe_image = np.true_divide(img, 255)      # convert to caffe style (0~1 BGR)
+        caffe_image = caffe_image[:, :, (2, 1, 0)]
+        img_forward = np.array(img, dtype=np.float32)
+        img_forward -= np.array((104.00698793, 116.66876762, 122.67891434))
 
-end = time.clock()
-print 'Time spent : ' + str(end - start) + ' s'
-#
-# img = cv2.imread(image_file_name)
-# print img.shape
-# print out.shape
-# np.set_printoptions(threshold='nan')
-# print out
-# cv2.imshow('img', out*255)
-# cv2.waitKey(0)
+        rectangles = detect_face_12c(net_12c_full_conv, img_forward, min_face_size, stride, True)     # detect faces
+        rectangles = cal_face_12c(net_12_cal, caffe_image, rectangles)      # calibration
+        rectangles = localNMS(rectangles)      # apply local NMS
+        rectangles = detect_face_24c(net_24c, caffe_image, rectangles)
+        rectangles = cal_face_24c(net_24_cal, caffe_image, rectangles)      # calibration
+        rectangles = localNMS(rectangles)      # apply local NMS
+        rectangles = detect_face_48c(net_48c, caffe_image, rectangles)
+        rectangles = globalNMS(rectangles)      # apply global NMS
+        rectangles = cal_face_48c(net_48_cal, caffe_image, rectangles)      # calibration
+
+sys.stdout = writeRangeFile
+print_blob_ranges()
+writeRangeFile.close()

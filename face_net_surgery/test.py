@@ -1,18 +1,10 @@
 from quantize_functions import *
 
-fixedPointList = fixed_point_list(2, 0)
+testList = tri_section_points(3)
 
-print fixedPointList
+print testList
 
-closestTimes = 0
-secondClosestTimes = 0
+print round_number(-5.25, testList)
 
-for curTry in range(10000):
-    roundedNum = round_number(2.7, fixedPointList, True)
-    if roundedNum == 3:
-        closestTimes += 1
-    else:
-        secondClosestTimes += 1
 
-print "Closest bin appeared " + str(closestTimes) + " times."
-print "Second closest bin appeared " + str(secondClosestTimes) + " times."
+
