@@ -1,6 +1,7 @@
 """
 Attempt to perform soft quantizing on face 12 net (with params -q, 0, q)
 Must be executed under caffe-master folder
+Training results will be saved as described in solver.prototxt
 """
 
 import numpy as np
@@ -110,36 +111,6 @@ for numOfIterations in range(400000):
     # if numOfIterations % 10000 == 0:
     #     net_quantized.save('/home/anson/caffe-master/models/face_12c/face_12c_soft_quantize_' \
     #              + str(quantizeBitNum) + '_' + str(numOfIterations) + '.caffemodel')
-
-
-# ================ At last, round params in net_quantized
-for k, v in net_quantized.params.items():
-    filters_weights = net_quantized.params[k][0].data
-    filters_bias = net_quantized.params[k][1].data
-
-    # ============ should be modified for different files ================
-    if k == 'conv1':
-        a_weight = -1
-        a_bias = -3
-    elif k == 'fc2':
-        a_weight = -3
-        a_bias = 0
-    elif k == 'fc3':
-        a_weight = -5
-        a_bias = 0
-    # =====================================================================
-    # lists of all possible values under current quantized bit num
-    weightTriPoints = tri_section_points(a_weight)
-    biasTriPoints = tri_section_points(a_bias)
-
-    for currentNum in np.nditer(filters_weights, op_flags=['readwrite']):
-        currentNum[...] = round_number(currentNum[...], weightTriPoints, stochasticRounding)
-
-    for currentNum in np.nditer(filters_bias, op_flags=['readwrite']):
-        currentNum[...] = round_number(currentNum[...], biasTriPoints, stochasticRounding)
-
-net_quantized.save(PRETRAINED)
-quantized_model.close()
 
 
 
