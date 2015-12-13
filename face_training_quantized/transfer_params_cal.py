@@ -10,8 +10,8 @@ caffe_root = '/home/anson/caffe-master/'  # this file is expected to be in {caff
 sys.path.insert(0, caffe_root + 'python')
 import caffe
 
-netKind = 12
-quantizeBitNum = 5
+netKind = 48
+quantizeBitNum = 2
 stochasticRounding = False
 
 # ==================  load soft quantized params  ======================================
@@ -20,7 +20,14 @@ PRETRAINED = '/home/anson/caffe-master/models/face_' + str(netKind) + '_cal/face
              + str(netKind) + '_cal_soft_quantize_' + str(quantizeBitNum) +'.caffemodel'
 caffe.set_mode_gpu()
 net = caffe.Net(MODEL_FILE, PRETRAINED, caffe.TEST)
-params = ['conv1', 'fc2', 'fc3']
+
+if netKind == 12:
+    params = ['conv1', 'fc2', 'fc3']
+elif netKind == 24:
+    params = ['conv1', 'fc2', 'fc3']
+elif netKind == 48:
+    params = ['conv1', 'conv2', 'fc3', 'fc4']
+
 # fc_params = {name: (weights, biases)}
 original_params = {pr: (net.params[pr][0].data, net.params[pr][1].data) for pr in params}
 
@@ -28,7 +35,7 @@ original_params = {pr: (net.params[pr][0].data, net.params[pr][1].data) for pr i
 # ==================  load file to save quantized parameters  =======================
 MODEL_FILE = '/home/anson/caffe-master/models/face_' + str(netKind) + '_cal/deploy.prototxt'
 PRETRAINED = '/home/anson/caffe-master/models/face_' + str(netKind) \
-             + '_cal/face_' + str(netKind) + '_cal_train_iter_10000.caffemodel'
+             + '_cal/face_' + str(netKind) + '_cal_train_iter_7500.caffemodel'
 
 quantized_model = open(PRETRAINED, 'w')
 net_quantized = caffe.Net(MODEL_FILE, PRETRAINED, caffe.TEST)

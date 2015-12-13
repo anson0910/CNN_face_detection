@@ -6,8 +6,8 @@ import sys
 sys.path.append('/home/anson/PycharmProjects/face_net_surgery')
 from quantize_functions import *
 
-netKind = 12
-quantizeBitNum = 5
+netKind = 48
+quantizeBitNum = 2
 stochasticRounding = False
 
 # ==================  caffe  ======================================
@@ -18,7 +18,7 @@ import caffe
 # ==================  load soft quantized params  ======================================
 MODEL_FILE = '/home/anson/caffe-master/models/face_' + str(netKind) + '_cal/deploy.prototxt'
 PRETRAINED = '/home/anson/caffe-master/models/face_' + str(netKind) \
-             + '_cal/face_' + str(netKind) + '_cal_train_iter_10000.caffemodel'
+             + '_cal/face_' + str(netKind) + '_cal_train_iter_32500.caffemodel'
 caffe.set_mode_gpu()
 net = caffe.Net(MODEL_FILE, PRETRAINED, caffe.TEST)
 # ============ should be modified for different files ================
