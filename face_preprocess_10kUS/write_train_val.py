@@ -3,7 +3,7 @@ import cv2
 import shutil
 import random
 
-trainingNet = 12
+trainingNet = 24
 
 # load and open files to read and write
 # =================== face_12c =================================

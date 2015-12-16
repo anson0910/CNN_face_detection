@@ -1,7 +1,7 @@
 import os
 import random
 
-trainingNet = 12
+trainingNet = 24
 
 data_base_dir = "/home/anson/face_pictures/negatives"     # directory containing files of positives
 
@@ -11,13 +11,13 @@ if trainingNet == 12:
     # load and open files to read and write
     write_file_name = '/home/anson/caffe-master/data/face/all_negatives.txt'
 elif trainingNet == 24:
-    start_neg_dir = 98
-    end_neg_dir = 98
+    start_neg_dir = 99
+    end_neg_dir = 99
     # load and open files to read and write
     write_file_name = '/home/anson/caffe-master/data/face/all_negatives_24c.txt'
 elif trainingNet == 48:
-    start_neg_dir = 99
-    end_neg_dir = 99
+    start_neg_dir = 98
+    end_neg_dir = 98
     # load and open files to read and write
     write_file_name = '/home/anson/caffe-master/data/face/all_negatives_48c.txt'
 
