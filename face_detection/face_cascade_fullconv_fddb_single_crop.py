@@ -1,28 +1,22 @@
-"""
-Evaluation of quantized weight version of CNN cascade on FDDB dataset
-"""
-
 import numpy as np
 import cv2
 import time
-import sys
 from operator import itemgetter
 from load_model_functions import *
 from face_detection_functions import *
 
-stochasticRoundedParams = True
-quantizeBitNum = 9
-
 # ==================  caffe  ======================================
 caffe_root = '/home/anson/caffe-master/'  # this file is expected to be in {caffe_root}/examples
+import sys
 sys.path.insert(0, caffe_root + 'python')
 import caffe
-
 # ==================  load models  ======================================
 net_12c_full_conv, net_12_cal, net_24c, net_24_cal, net_48c, net_48_cal = \
-    load_face_models(quantizeBitNum, stochasticRoundedParams)
-# =======================================================================
+    load_face_models(loadNet=True)
 
+nets = (net_12c_full_conv, net_12_cal, net_24c, net_24_cal, net_48c, net_48_cal)
+
+# ========================================================
 total_time = 0
 total_images = 0
 
@@ -54,20 +48,12 @@ for current_file in range(1, 11):
 
         start = time.clock()
 
-        caffe_image = np.true_divide(img, 255)      # convert to caffe style (0~1 BGR)
-        caffe_image = caffe_image[:, :, (2, 1, 0)]
+        # caffe_image = np.true_divide(img, 255)      # convert to caffe style (0~1 BGR)
+        # caffe_image = caffe_image[:, :, (2, 1, 0)]
         img_forward = np.array(img, dtype=np.float32)
-        img_forward -= np.array((104.00698793, 116.66876762, 122.67891434))
+        img_forward -= np.array((104, 117, 123))
 
-        rectangles = detect_face_12c(net_12c_full_conv, img_forward, min_face_size, stride, True)     # detect faces
-        rectangles = cal_face_12c(net_12_cal, caffe_image, rectangles)      # calibration
-        rectangles = localNMS(rectangles)      # apply local NMS
-        rectangles = detect_face_24c(net_24c, caffe_image, rectangles)
-        rectangles = cal_face_24c(net_24_cal, caffe_image, rectangles)      # calibration
-        rectangles = localNMS(rectangles)      # apply local NMS
-        rectangles = detect_face_48c(net_48c, caffe_image, rectangles)
-        rectangles = globalNMS(rectangles)      # apply global NMS
-        rectangles = cal_face_48c(net_48_cal, caffe_image, rectangles)      # calibration
+        rectangles = detect_faces_net(nets, img_forward, min_face_size, stride, True, 2, 0.05)
 
         end = time.clock()
         total_time += (end - start)
