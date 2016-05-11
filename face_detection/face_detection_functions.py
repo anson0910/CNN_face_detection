@@ -528,6 +528,8 @@ def detect_face_12c_net(net_12c_full_conv, img_forward, min_face_size, stride,
     caffe_img_resized = resize_image(img_forward, current_scale)      # resized initial caffe image
     current_height, current_width, channels = caffe_img_resized.shape
 
+    # print "Shape after resizing : " + str(caffe_img_resized.shape)
+
     while current_height > net_kind and current_width > net_kind:
         caffe_img_resized_CHW = caffe_img_resized.transpose((2, 0, 1))  # switch from H x W x C to C x H x W
         # shape for input (data blob is N x C x H x W), set data
@@ -539,6 +541,16 @@ def detect_face_12c_net(net_12c_full_conv, img_forward, min_face_size, stride,
         out = net_12c_full_conv.blobs['prob'].data[0][1, :, :]
         # print out.shape
         out_height, out_width = out.shape
+
+        # threshold = 0.02
+        # idx = out[:, :] >= threshold
+        # out[idx] = 1
+        # idx = out[:, :] < threshold
+        # out[idx] = 0
+        # cv2.imshow('img', out*255)
+        # cv2.waitKey(0)
+
+        # print "Shape of output after resizing " + str(caffe_img_resized.shape) + " : " + str(out.shape)
 
         for current_y in range(0, out_height):
             for current_x in range(0, out_width):

@@ -1,7 +1,7 @@
 import numpy as np
 import sys
 
-def load_face_models(quantizeBitNum = 0, stochasticRoundedParams = False, loadNet = False):
+def load_face_models(quantizeBitNum = 0, stochasticRoundedParams = False, loadNet = False, softQuantize=False):
     '''
     Loads face detection models
     :param quantizeBitNum: number of bits to quantize, non quantized params are loaded when quantizeBitNum is 0
@@ -18,9 +18,10 @@ def load_face_models(quantizeBitNum = 0, stochasticRoundedParams = False, loadNe
     # Set the right path to your model definition file, pretrained model weights,
     # and the image you would like to classify.
     MODEL_FILE = '/home/anson/caffe-master/models/face_12c/face12c_full_conv.prototxt'
-    if quantizeBitNum == 0:
+    if softQuantize:
+        PRETRAINED = '/home/anson/caffe-master/models/face_12c/face12c_full_conv_soft_quantize_2.caffemodel'
+    elif quantizeBitNum == 0:
         PRETRAINED = '/home/anson/caffe-master/models/face_12c/face12c_full_conv.caffemodel'
-        #PRETRAINED = '/home/anson/caffe-master/models/face_12c/face12c_full_conv_soft_quantize_2.caffemodel'
     else:
         if stochasticRoundedParams:
             PRETRAINED = '/home/anson/caffe-master/models/face_12c/face12c_full_conv_SRquantize_' \
@@ -57,7 +58,9 @@ def load_face_models(quantizeBitNum = 0, stochasticRoundedParams = False, loadNe
     # Set the right path to your model definition file, pretrained model weights,
     # and the image you would like to classify.
     MODEL_FILE = '/home/anson/caffe-master/models/face_24c/deploy.prototxt'
-    if quantizeBitNum == 0:
+    if softQuantize:
+        PRETRAINED = '/home/anson/caffe-master/models/face_24c/face_24c_soft_quantize_2.caffemodel'
+    elif quantizeBitNum == 0:
         PRETRAINED = '/home/anson/caffe-master/models/face_24c/face_24c_train_iter_400000.caffemodel'
     else:
         if stochasticRoundedParams:
@@ -103,7 +106,9 @@ def load_face_models(quantizeBitNum = 0, stochasticRoundedParams = False, loadNe
     # Set the right path to your model definition file, pretrained model weights,
     # and the image you would like to classify.
     MODEL_FILE = '/home/anson/caffe-master/models/face_48c/deploy.prototxt'
-    if quantizeBitNum == 0:
+    if softQuantize:
+        PRETRAINED = '/home/anson/caffe-master/models/face_48c/face_48c_soft_quantize_2.caffemodel'
+    elif quantizeBitNum == 0:
         PRETRAINED = '/home/anson/caffe-master/models/face_48c/face_48c_train_iter_200000.caffemodel'
     else:
         if stochasticRoundedParams:
@@ -126,8 +131,10 @@ def load_face_models(quantizeBitNum = 0, stochasticRoundedParams = False, loadNe
     # Set the right path to your model definition file, pretrained model weights,
     # and the image you would like to classify.
     MODEL_FILE = '/home/anson/caffe-master/models/face_48_cal/deploy.prototxt'
-    if quantizeBitNum == 0:
-        PRETRAINED = '/home/anson/caffe-master/models/face_48_cal/face_48_cal_train_iter_390000.caffemodel'
+    if softQuantize:
+        PRETRAINED = '/home/anson/caffe-master/models/face_48_cal/face_48_cal_soft_quantize_2.caffemodel'
+    elif quantizeBitNum == 0:
+        PRETRAINED = '/home/anson/caffe-master/models/face_48_cal/face_48_cal_train_iter_300000.caffemodel'
     else:
         if stochasticRoundedParams:
             PRETRAINED = '/home/anson/caffe-master/models/face_48_cal/face_48_cal_SRquantize_' \

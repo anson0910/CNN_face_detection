@@ -10,8 +10,9 @@ from operator import itemgetter
 from load_model_functions import *
 from face_detection_functions import *
 
-stochasticRoundedParams = True
-quantizeBitNum = 9
+stochasticRoundedParams = False
+
+quantizeBitNum = 0
 
 # ==================  caffe  ======================================
 caffe_root = '/home/anson/caffe-master/'  # this file is expected to be in {caffe_root}/examples
@@ -20,7 +21,7 @@ import caffe
 
 # ==================  load models  ======================================
 net_12c_full_conv, net_12_cal, net_24c, net_24_cal, net_48c, net_48_cal = \
-    load_face_models(quantizeBitNum, stochasticRoundedParams)
+    load_face_models(quantizeBitNum, stochasticRoundedParams, loadNet=True, softQuantize=True)
 # =======================================================================
 
 total_time = 0
@@ -54,20 +55,23 @@ for current_file in range(1, 11):
 
         start = time.clock()
 
-        caffe_image = np.true_divide(img, 255)      # convert to caffe style (0~1 BGR)
-        caffe_image = caffe_image[:, :, (2, 1, 0)]
         img_forward = np.array(img, dtype=np.float32)
         img_forward -= np.array((104.00698793, 116.66876762, 122.67891434))
 
-        rectangles = detect_face_12c(net_12c_full_conv, img_forward, min_face_size, stride, True)     # detect faces
-        rectangles = cal_face_12c(net_12_cal, caffe_image, rectangles)      # calibration
+        rectangles = detect_face_12c_net(net_12c_full_conv, img_forward, min_face_size, stride, True)     # detect faces
+        # print("Number of faces after 12 net: " + str(len(rectangles)))
+        rectangles = cal_face_12c_net(net_12_cal, img_forward, rectangles)      # calibration
         rectangles = localNMS(rectangles)      # apply local NMS
-        rectangles = detect_face_24c(net_24c, caffe_image, rectangles)
-        rectangles = cal_face_24c(net_24_cal, caffe_image, rectangles)      # calibration
+        rectangles = detect_face_24c_net(net_24c, img_forward, rectangles)
+        # print("Number of faces after 24 net: " + str(len(rectangles)))
+        rectangles = cal_face_24c_net(net_24_cal, img_forward, rectangles)      # calibration
         rectangles = localNMS(rectangles)      # apply local NMS
-        rectangles = detect_face_48c(net_48c, caffe_image, rectangles)
+        rectangles = detect_face_48c_net(net_48c, img_forward, rectangles)
+        # print("Number of faces after 48 net: " + str(len(rectangles)))
         rectangles = globalNMS(rectangles)      # apply global NMS
-        rectangles = cal_face_48c(net_48_cal, caffe_image, rectangles)      # calibration
+        # print("Number of faces after NMS: " + str(len(rectangles)))
+        rectangles = cal_face_48c_net(net_48_cal, img_forward, rectangles)      # calibration
+        # print("Number of faces after 48 cal: " + str(len(rectangles)))
 
         end = time.clock()
         total_time += (end - start)

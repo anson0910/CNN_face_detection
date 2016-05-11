@@ -16,17 +16,13 @@ net_12c_full_conv, net_12_cal, net_24c, net_24_cal, net_48c, net_48_cal = \
 
 nets = (net_12c_full_conv, net_12_cal, net_24c, net_24_cal, net_48c, net_48_cal)
 
-# ========================================================
-total_time = 0
-total_images = 0
-
 # load image and convert to gray
-read_img_name = '/home/anson/FDDB/originalPics/2002/07/19/big/img_158.jpg'
+read_img_name = '/home/anson/FDDB/originalPics/2002/07/19/big/img_352.jpg'
 img = cv2.imread(read_img_name)     # BGR
 
 print img.shape
 
-min_face_size = 40
+min_face_size = 48
 stride = 5
 
 # caffe_image = np.true_divide(img, 255)      # convert to caffe style (0~1 BGR)
