@@ -3,6 +3,7 @@
 ### A few modifications to the paper:<br>
 1. Multi-resolution is not used for simplicity, you can add them in the .prototxt files under **CNN_face_detection_models** to do so.<br>
 2. 12-net is turned into fully convolutional neural network to reduce computation.
+3. I took out the normalization layers out of the **deploy.prototxt** files in 48-net and 48-calibration-net, because of convenience for me implementing them in hardware, you can just simply at them back as in the corresponding **train_val.prototxt** files.
 
 ### In order to test CNN Cascade: 
 Detection scripts are stored under **CNN_face_detection/face_detection** directory, 
