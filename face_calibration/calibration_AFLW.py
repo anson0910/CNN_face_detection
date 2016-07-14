@@ -70,8 +70,8 @@ for current_rect in range(0, number_of_lines):
         for cur_x in [-0.17, 0, 0.17]:
             for cur_y in [-0.17, 0, 0.17]:
                 s_n = 1 / cur_scale
-                x_n = -cur_x
-                y_n = -cur_y
+                x_n = -cur_x / cur_scale
+                y_n = -cur_y / cur_scale
 
                 x_temp = x - (x_n * w / s_n)
                 y_temp = y - (y_n * h / s_n)
